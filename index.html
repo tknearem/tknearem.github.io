@@ -1,1 +1,135 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiffany Knearem | Portfolio</title>
+  <style>
+    /* Embed or reference Avenir Light; falls back to system sans-serifs */
+    @font-face {
+      font-family: 'Avenir Light';
+      src: local('Avenir Light'), local('Avenir-Light'), local('AvenirLTStd-Light');
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'Avenir Light', 'Avenir', Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0f274a;
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 300; /* Avenir Light weight */
+    }
+
+    header h2 {
+      margin: 10px 0 0;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #0f274a;
+      font-weight: 300;
+    }
+
+    #news {
+      overflow: hidden;
+      height: 200px;
+      position: relative;
+      background: #f6f8fb;
+    }
+
+    #news ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      animation: scrollNews 20s linear infinite;
+      font-weight: 300;
+    }
+
+    #news li {
+      padding: 10px 20px;
+      border-bottom: 1px solid #e0e6ee;
+    }
+
+    @keyframes scrollNews {
+      0% {
+        top: 0;
+      }
+      100% {
+        top: -100%;
+      }
+    }
+
+    a {
+      color: #0f274a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tiffany Knearem</h1>
+    <h2>User Experience Researcher</h2>
+  </header>
+
+  <section id="about">
+    <h3>About Me</h3>
+    <p><!-- Add your bio here --></p>
+  </section>
+
+  <section id="news">
+    <h3>News</h3>
+    <ul>
+      <li>June 10, 2025 — Launched new portfolio website.</li>
+      <li>May 2025 — Presented at UXPA Boston on AI-powered research methods.</li>
+      <li>April 2025 — Published article in Journal of Usability Studies.</li>
+      <li>March 2025 — Completed research project with Healthcare AI startup.</li>
+      <li>February 2025 — Joined Advisory Board for Boston UX Collective.</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <p><!-- Showcase your projects here --></p>
+  </section>
+
+  <section id="publications">
+    <h3>Publications</h3>
+    <p><!-- List your publications here --></p>
+  </section>
+
+  <script>
+    // Duplicate the news items for a seamless loop
+    const newsList = document.querySelector('#news ul');
+    newsList.innerHTML += newsList.innerHTML;
+  </script>
+</body>
+</html>
+
